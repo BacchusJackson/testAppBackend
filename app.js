@@ -1,7 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
 
+app.use(cors());
 
 app.get('/test', (req, res) => {
    console.log("Request Received from: " + req.hostname)
